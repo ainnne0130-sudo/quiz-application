@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2ff;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 50px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 40px;
+    color: #4f46e5;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #6b7280;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 25px;
+}
+
+/* Start Screen */
+
+.settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.settings div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.settings label {
+    font-weight: bold;
+}
+
+.settings select {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* Buttons */
+
+.primary-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background: #4338ca;
+}
+
+.primary-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* Quiz Top */
+
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#timer {
+    color: #dc2626;
+}
+
+/* Progress */
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #4f46e5;
+    transition: width 0.3s ease;
+}
+
+/* Question */
+
+#question {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+/* Answers */
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.answer-btn {
+    width: 100%;
+    padding: 14px;
+    text-align: left;
+    border: 2px solid #e5e7eb;
+    background: white;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.answer-btn:hover {
+    border-color: #4f46e5;
+    background: #f5f3ff;
+}
+
+.answer-btn.selected {
+    border-color: #4f46e5;
+    background: #e0e7ff;
+}
+
+.answer-btn.correct {
+    background: #dcfce7;
+    border-color: #16a34a;
+}
+
+.answer-btn.wrong {
+    background: #fee2e2;
+    border-color: #dc2626;
+}
+
+/* Result */
+
+#resultScreen {
+    text-align: center;
+}
+
+#resultScreen > p {
+    margin-bottom: 15px;
+    color: #6b7280;
+}
+
+.score {
+    font-size: 50px;
+    font-weight: bold;
+    color: #4f46e5;
+    margin: 20px 0;
+}
+
+#resultMessage {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Hidden */
+
+.hidden {
+    display: none;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .settings {
+        grid-template-columns: 1fr;
+    }
+
+    #question {
+        font-size: 20px;
+    }
+
+    .score {
+        font-size: 42px;
+    }
+}
