@@ -29,3 +29,9 @@ A responsive multiple-choice quiz application built using HTML, CSS, and JavaScr
 ## GitHub Repository
 
 [GitHub Repository](https://github.com/ainnne0130-sudo/quiz-application)
+## SEO Improvements
+
+- Added a meta description to the main page.
+- Reviewed the page title and heading structure.
+- Tested the application after the SEO changes.
+- Verified that the existing quiz functionality remained working.
